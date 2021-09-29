@@ -49,6 +49,7 @@ def countfiles(dictfiles, lsttokens, repo):
         print("Error receiving data")
         exit(0)
 # GitHub repo
+#this is our repo
 repo = "Abrixo/rootbeer"
 # repo = 'scottyab/rootbeer'
 # repo = 'Skyscanner/backpack' # This repo is commit heavy. It takes long to finish executing
@@ -63,7 +64,7 @@ repo = "Abrixo/rootbeer"
 #lstTokens = ["fd02a694b606c4120b8ca7bbe7ce29229376ee",
  #               "16ce529bdb32263fb90a392d38b5f53c7ecb6b",
   #              "8cea5715051869e98044f38b60fe897b350d4a"]
-
+This is where we put our token
 lstTokens = [""]
 dictfiles = dict()
 countfiles(dictfiles, lstTokens, repo)
