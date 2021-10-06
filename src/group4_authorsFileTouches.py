@@ -2,10 +2,6 @@ import json
 from pip._vendor import requests
 import csv
 
-
-# repo = 'kuyesu/sre'
-# put your tokens here
-lstTokens = []
 # GitHub Authentication function
 def github_auth(url, lsttoken, ct):
     jsonData = None
