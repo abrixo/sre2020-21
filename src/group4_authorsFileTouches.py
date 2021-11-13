@@ -1,9 +1,8 @@
 import json
 from pip._vendor import requests
 import csv
+import requests
 
-
-# repo = 'kuyesu/sre'
 # put your tokens here
 lstTokens = []
 # GitHub Authentication function
@@ -12,7 +11,7 @@ def github_auth(url, lsttoken, ct):
     try:
         ct = ct % len(lstTokens)
         headers = {'Authorization': 'Bearer {}'.format(lsttoken[ct])}
-        request = requests.get(url, headers=headers)
+        request = requests.get(url, headers=headers).json
         jsonData = json.loads(request.content)
         ct += 1
     except Exception as e:
@@ -107,7 +106,7 @@ fileCSV = open(fileOutput, 'w')
 writer = csv.writer(fileCSV)
 writer.writerow(rows)
 
-iterator = 0;
+iterator = 0
 for filename in filenames:
     rows = [filename,  names[iterator], dates[iterator]]
     iterator+=1
